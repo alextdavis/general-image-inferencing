@@ -29,7 +29,6 @@ def sem_segment(server_address, model_spec_name, image, label_map_path=None):
 
     response.raise_for_status()
     outputs = response.json()['outputs']
-    print(outputs['detection_boxes'])
 
     if label_map_path:
         label_map = label_map_util.create_category_index_from_labelmap(label_map_path, use_display_name=True)
